@@ -1,0 +1,26 @@
+﻿@model Opinion
+<form asp-action="AddOpinion" method="post" class="form-horizontal" role="form">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="UserName" class="col-md-2 cotrnol-label"></label>
+        <div class="col-md-5">
+            <input asp-for="UserName" class="form-control" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Message" class="col-md-2 cotrnol-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Message" class="form-control" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 col-md-offset-2">
+            <input type="submit" class="btn btn-primary" value="Send Opinion" />
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,44 @@
+﻿@model DetailsViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+<hr />
+<h2>@Model.Appointment.CustomerFirstName @Model.Appointment.CustomerLastName</h2>
+<h3>@Model.Appointment.Date</h3>
+<h4>@Model.Appointment.CustomerEmail</h4>
+<h4>@Model.Appointment.CustomerPhoneNumber</h4>
+@if (!@Model.Appointment.isConfirmed)
+{
+<form asp-action="ConfirmAppointment" asp-controller="Appointment"  method="post" class="form-horizontal" role="form">
+    <div> @Html.ValidationMessage("NotChecked") </div>
+    <input asp-for="Appointment.Id" value="@Model.Appointment.Id" type="hidden" />
+    <input asp-for="Appointment.isConfirmed" id="myCheck" type="checkbox" />
+    <input type="submit" onclick="checkCheckBox()" value="Confirm">
+    <script>
+        function checkCheckBox()
+        {
+            if (document.getElementById("myCheck").checked == false) {
+                alert("You haven't confirmed in checkbox!");
+            }
+        }
+    </script>
+</form>
+        }
+<hr />
+
+@foreach (var element in Model.Comments)
+{
+   
+
+<div class="thumbnail">
+     <div class="thumbnail">
+         <h3>@element.UserName</h3>
+          <p>@element.Message</p>
+      </div>
+</div>
+ }
+
+
+

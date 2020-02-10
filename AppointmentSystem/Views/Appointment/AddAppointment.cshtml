@@ -1,0 +1,47 @@
+﻿@model Appointment
+<form asp-action="AddAppointment" method="post" class="form-horizontal" role="form">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="CustomerFirstName" class="col-md-2 cotrnol-label"></label>
+        <div class="col-md-5">
+            <input asp-for="CustomerFirstName" class="form-control" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="CustomerLastName" class="col-md-2 cotrnol-label"></label>
+        <div class="col-md-5">
+            <input asp-for="CustomerLastName" class="form-control" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="CustomerEmail" class="col-md-2 cotrnol-label"></label>
+        <div class="col-md-5">
+            <input asp-for="CustomerEmail" class="form-control" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="CustomerPhoneNumber" class="col-md-2 cotrnol-label"></label>
+        <div class="col-md-5">
+            <input asp-for="CustomerPhoneNumber" class="form-control" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="AppointmentDate" class="col-md-2 cotrnol-label"></label>
+        <div class="col-md-5">
+            <input asp-for="AppointmentDate" class="form-control" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 col-md-offset-2">
+            <input type="submit" class="btn btn-primary" value="Send request" />
+        </div>
+    </div>
+</form>
+

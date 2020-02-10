@@ -1,0 +1,20 @@
+﻿@model OpinionViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container">
+    <h2>Appointment System v1.0</h2>
+</div>
+<div class="container thumbnail">
+    <h2>Opinions</h2>
+    @foreach (var item in Model.Opinions)
+    {
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <h4>@item.UserName</h4>
+                <p>@item.Message</p>
+            </div>
+        </div>
+
+    }
+</div>

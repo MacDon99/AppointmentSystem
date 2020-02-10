@@ -1,0 +1,27 @@
+﻿@model AppointmentViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>@Model.Tittle</h2>
+
+@{
+    int counts = 0; 
+    foreach (var item in Model.Appointments)
+    {
+        if (@item.isConfirmed)
+        {
+            <hr />
+            <a asp-controller="Appointment" asp-action="Details" asp-route-id="@item.Id"><h2>@item.CustomerFirstName @item.CustomerLastName</h2></a>
+            <h3>@item.Date</h3>
+            <h4>@item.CustomerEmail</h4>
+            <h4>@item.CustomerPhoneNumber</h4>
+            counts += 1;
+            <hr />
+        }
+    }
+    if (counts == 0)
+    {
+        <h2 class="text-success">You have no more appointments</h2>
+    }
+}
