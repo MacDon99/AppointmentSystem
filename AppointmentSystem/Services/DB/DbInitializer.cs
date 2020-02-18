@@ -52,8 +52,7 @@ namespace AppointmentSystem.Models
             {
                 appDbContext.Comments.AddRange
                     (
-                    new Comment { UserName = "MacDon99", Message = "Can I change the date?", AppointmentId = 1 },
-                    new Comment { UserName = "Kamiltcz", Message = "Koza chuj", AppointmentId = 2}
+                    new Comment { UserName = "MacDon99", Message = "Can I change the date?", AppointmentId = 1 }
                     );
             }
             if (!appDbContext.Opinions.Any())

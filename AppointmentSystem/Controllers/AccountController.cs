@@ -47,7 +47,7 @@ namespace AppointmentSystem.Controllers
                 }
             }
 
-            ModelState.AddModelError("", "Nazwa użytkownika/hasło nie właściwe");
+            ModelState.AddModelError("", "Username incorrect");
 
             return View(loginVM);
         }
@@ -75,7 +75,7 @@ namespace AppointmentSystem.Controllers
 
                 }
             }
-            ModelState.AddModelError("", "Niepoprawny login lub hasło. Hasło wymaga małych i wielkich liter oraz znaku alfanumerycznego.");
+            ModelState.AddModelError("", "Login or password incorrect. Password required small and big letters and an alphanumeric symbol.");
             return View(loginVM);
         }
 
