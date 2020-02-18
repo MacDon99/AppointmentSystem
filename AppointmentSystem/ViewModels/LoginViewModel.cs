@@ -5,12 +5,12 @@ namespace AppointmentSystem.ViewModels
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Nazwa Użytkownika")]
+        [Display(Name = "Username")]
         public string UserName { get; set; }
         [Required]
-        [Display(Name = "Hasło")]
-        [DataType(DataType.Password, ErrorMessage = "Niepoprawne hasło. Wymaganie są małe i wielkie litery oraz znak alfanumeryczny.")]
-
+        [Display(Name = "Password")]
+        [DataType(DataType.Password, ErrorMessage = "Password incorrect. Password must include big and small letters and alphanumeric symbol.")]
+        
         public string Password { get; set; }
     }
 }
